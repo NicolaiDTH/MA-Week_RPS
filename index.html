@@ -6,39 +6,50 @@
   </head>
   <body>
     <center>
-    <div class='choices'>
-        <img src="images/paper.png" data-pick='paper'>
-        <img src="images/shocker.png" data-pick='shocker'>
-        <img src="images/rock.png" data-pick='rock'>
-        <img src="images/bullhorns.png" data-pick='bullhorns'>
-        <img src="images/scissors.png" data-pick='scissors'>
+    <section class='choices'>
+      <img src="images/paper.png" data-pick='paper'>
+      <img src="images/bullhorns.png" data-pick='bullhorns'>
+      <img src="images/shocker.png" data-pick='shocker'>
+      <img src="images/scissors.png" data-pick='scissors'>
+      <img src="images/rock.png" data-pick='rock'>
+    </section>
       <ul id='results'></ul>
+    <footer>
+      <input type="text" placeholder="name + enter" name="input_name" id="input_name" autocomplete="off">
+    </footer>  
     </center> 
-    </div>
     <script src='lib/Player.js'></script>
     <script src='lib/Game.js'></script>
     <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script>
       $(document).ready(function() {
-        var p1 = new Player('Human');
-        var p2 = new Player('Computer');
-        var game = new Game(p1, p2);
+        $('#input_name').keypress(function (e) {
+          if (e.which == 13) {
+            var playerName = $('#input_name').val();
+            var p1 = new Player(playerName);
+            var p2 = new Player('Robot');
+            var game = new Game(p1, p2);
+            $('input').css('visibility', 'hidden');
 
-        $('.choices img').on('click', function(){
-          var choices = $('.choices img').map(function(){
-            return $(this).data('pick');
+            $('.choices img').on('click', function(){
+              var choices = $('.choices img').map(function(){
+                return $(this).data('pick');
+              });
+          
+                p1.picks($(this).data('pick'));
+                p2.randomlyPicks(choices);
+
+                $('input').css('display', 'none');
+
+                $('<li>' + game.winningMessage() + '</li>').prependTo('#results').slideDown();
+
+                $('li:gt(15)').fadeOut(function(){
+                $(this).remove();
+              });
+             });
+            };
           });
-          p1.picks($(this).data('pick'));
-          p2.randomlyPicks(choices);
-
-
-          $('<li>' + game.winningMessage() + '</li>').prependTo('#results').slideDown();
-
-          $('li:gt(10)').fadeOut(function(){
-            $(this).remove();
-          });
-        });
-      });
+        })
     </script>
   </body>
 </html>
