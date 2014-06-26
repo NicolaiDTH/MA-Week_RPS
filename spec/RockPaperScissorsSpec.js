@@ -160,7 +160,7 @@ describe("Rock-Paper-Scissors", function() {
           return game.winner();
         });
 
-        expect(drawGameResults).toEqual(['Draw', 'Draw', 'Draw', 'Draw', 'Draw']);
+        expect(drawGameResults).toEqual(['draw', 'draw', 'draw', 'draw', 'draw']);
       });
 
     });

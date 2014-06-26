@@ -14,13 +14,15 @@
       <img src="images/scissors.png" data-pick='scissors'>
       <img src="images/rock.png" data-pick='rock'>
     </section>
+      <h1 class="humanh1"></h1>
+      <h1 class="computerh1"></h1>
+      <h2 id="p1wc" class='p1victories'></h2>   
+      <h2 id="p2wc" class='p2victories'></h2>   
       <ul class='results'></ul>
-      <ul class='p1victories'></ul>
-      <ul class='p2victories'></ul>      
     </center>
     <center>
     <footer>
-      <input type="text" placeholder="name + enter" name="input_name" id="input_name" autocomplete="off">
+      <input type="text" placeholder="name + enter" name="input_name" id="input_name" autocomplete="off" maxlength="15">
     </footer>
     </center>
     <div class="verticalLine2"></div>
@@ -32,8 +34,10 @@
         $('#input_name').keypress(function (e) {
           if (e.which == 13) {
             var playerName = $('#input_name').val();
+            $(".humanh1").html(playerName);
+            $(".computerh1").html("evil " + playerName);
             var p1 = new Player(playerName);
-            var p2 = new Player('Robot');
+            var p2 = new Player("evil " + playerName);
             var game = new Game(p1, p2);
             $('input').css('visibility', 'hidden');
 
@@ -48,12 +52,11 @@
 
                 $('<li>' + game.winningMessage() + '</li>').prependTo('.results').slideDown();
 
-                $('li:gt(20)').fadeOut(function(){
-                $(this).remove();
-                game.winner().wins();
+                $("#p1wc").html(p1.wc());
+                $("#p2wc").html(p2.wc());
 
-                p1.win_count;
-                p2.win_count;
+                $('li:gt(30)').fadeOut(function(){
+                $(this).remove();
               });
              });
             };

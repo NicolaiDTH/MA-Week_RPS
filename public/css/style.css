@@ -7,26 +7,26 @@ body {
 }
 
 .verticalLine {
-    border-left: thick solid #000;
-    position: fixed;
-    height: 110%;
-    top: -1%;
-    right: 31%;
-    opacity: 0.25;
+  border-left: thick solid #000;
+  position: fixed;
+  height: 110%;
+  top: -1%;
+  right: 31%;
+  opacity: 0.25;
 }
 
 .verticalLine2 {
-    border-left: thick solid #000;
-    position: fixed;
-    height: 110%;
-    top: -1%;
-    left: 32%;
-    opacity: 0.25;
+  border-left: thick solid #000;
+  position: fixed;
+  height: 110%;
+  top: -1%;
+  left: 32%;
+  opacity: 0.25;
 }
 
 .choices {
-  position: absolute;
-  top: -15%;
+  position: fixed;
+  top: -14%;
 }
 
 .choices img {
@@ -44,15 +44,48 @@ body {
 }
 
 h1 {
+  font-size: 40;
   color: #000;
   opacity: 0.35;
 }
 
+.humanh1 {
+  position: fixed;
+  top: 0%;
+  left: 5%;
+  text-transform: lowercase;
+}
+
+.computerh1 {
+  position: fixed;
+  top: 0%;
+  right: 5%;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-size: 36;
+  color: #000;
+  opacity: 0.35;
+}
+
+.p1victories {
+  position: fixed;
+  top: 0%;
+  left: 27%;
+}
+
+.p2victories {
+  position: fixed;
+  top: 0%;
+  right: 27%;
+}
+
 .results {
   list-style: none;
-  position: relative;
-  top: 100px;
-  right: 1%;
+  position: fixed;
+  top: 10%;
+  right: 33%;
   width: 33%;
 }
 
@@ -61,23 +94,16 @@ h1 {
   background: #000;
   color: #fff;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 10px;
   display: none;
   margin-bottom: 10px;
 }
 
-.p1victories {
-
-}
-
-.p2victories {
-  
-}
 
 #input_name {
-  position: absolute;
+  position: fixed;
   bottom: 5%;
-  left: 33.5%;
+  left: 34%;
   text-align: center;
   width: 33%;
   font-size: 25px;
@@ -85,4 +111,5 @@ h1 {
   border-bottom: dashed 1px #000;
   outline: none;
   opacity: .5;
+  text-transform: lowercase;
  }
