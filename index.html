@@ -3,8 +3,9 @@
   <head>
     <title>Handsy</title>
     <link rel="stylesheet" href="public/css/style.css" />
-  </head>
+  </head> 
   <body>
+    <div class="verticalLine"></div>
     <center>
     <section class='choices'>
       <img src="images/paper.png" data-pick='paper'>
@@ -13,11 +14,16 @@
       <img src="images/scissors.png" data-pick='scissors'>
       <img src="images/rock.png" data-pick='rock'>
     </section>
-      <ul id='results'></ul>
+      <ul class='results'></ul>
+      <ul class='p1victories'></ul>
+      <ul class='p2victories'></ul>      
+    </center>
+    <center>
     <footer>
       <input type="text" placeholder="name + enter" name="input_name" id="input_name" autocomplete="off">
-    </footer>  
-    </center> 
+    </footer>
+    </center>
+    <div class="verticalLine2"></div>
     <script src='lib/Player.js'></script>
     <script src='lib/Game.js'></script>
     <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
@@ -38,13 +44,16 @@
           
                 p1.picks($(this).data('pick'));
                 p2.randomlyPicks(choices);
-
                 $('input').css('display', 'none');
 
-                $('<li>' + game.winningMessage() + '</li>').prependTo('#results').slideDown();
+                $('<li>' + game.winningMessage() + '</li>').prependTo('.results').slideDown();
 
-                $('li:gt(15)').fadeOut(function(){
+                $('li:gt(20)').fadeOut(function(){
                 $(this).remove();
+                game.winner().wins();
+
+                p1.win_count;
+                p2.win_count;
               });
              });
             };

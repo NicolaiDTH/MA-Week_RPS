@@ -1,6 +1,32 @@
 body {
   font-family: Helvetica;
   background-color: #fff;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.verticalLine {
+    border-left: thick solid #000;
+    position: fixed;
+    height: 110%;
+    top: -1%;
+    right: 31%;
+    opacity: 0.25;
+}
+
+.verticalLine2 {
+    border-left: thick solid #000;
+    position: fixed;
+    height: 110%;
+    top: -1%;
+    left: 32%;
+    opacity: 0.25;
+}
+
+.choices {
+  position: absolute;
+  top: -15%;
 }
 
 .choices img {
@@ -9,7 +35,6 @@ body {
   transform:rotate(180deg);
   -ms-transform:rotate(180deg); /* IE 9 */
   -webkit-transform:rotate(180deg); /* Opera, Chrome, and Safari */
-  margin-top: -8%;
 }
 
 .choices img:hover {
@@ -19,36 +44,45 @@ body {
 }
 
 h1 {
-  text-transform: capitalize;
   color: #000;
+  opacity: 0.35;
 }
 
-#results {
+.results {
   list-style: none;
+  position: relative;
+  top: 100px;
+  right: 1%;
+  width: 33%;
 }
 
-#results li {
+.results li {
+  opacity: 0.55;
   background: #000;
   color: #fff;
   font-size: 18px;
   border-radius: 8px;
-  width: 33%;
   display: none;
   margin-bottom: 10px;
-  padding: 0px;
 }
 
-footer {
-  padding-top: 42.5%;
+.p1victories {
+
 }
 
-input {
+.p2victories {
+  
+}
+
+#input_name {
+  position: absolute;
+  bottom: 5%;
+  left: 33.5%;
   text-align: center;
   width: 33%;
-  font-size: 18px;
+  font-size: 25px;
   border: none;
   border-bottom: dashed 1px #000;
   outline: none;
-  color: #000;
   opacity: .5;
  }

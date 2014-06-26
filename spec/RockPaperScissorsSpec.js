@@ -6,7 +6,6 @@ describe("Rock-Paper-Scissors", function() {
     player1 = new Player('Human');
     player2 = new Player('Computer');
     game = new Game(player1, player2);
-
   });
 
   describe('winning and losing', function() {
