@@ -82,6 +82,7 @@ h2 {
 }
 
 .results {
+  text-transform: lowercase;
   list-style: none;
   position: fixed;
   top: 10%;
@@ -90,6 +91,7 @@ h2 {
 }
 
 .results li {
+  text-transform: lowercase;
   opacity: 0.55;
   background: #000;
   color: #fff;

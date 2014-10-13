@@ -1,3 +1,12 @@
+![RPS!](http://www.wpclipart.com/recreation/playing/playing_2/rock_paper_scissors.png)
+
+Rock, Paper, Scissors, Bullhorns & Shocker!
+--
+
+
+Instructions:
+--
+
 rock wins: scissors & shock, 
      loses: paper & bull
 
@@ -12,3 +21,12 @@ shock wins: scissors & bull,
 
 bull wins: rock & paper, 
      loses: shock & scissors
+
+Lessons Learned:
+--
+
+
+Problems With The Code:
+--
+
+
