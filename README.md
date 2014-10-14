@@ -24,9 +24,12 @@ bull wins: rock & paper,
 
 Lessons Learned:
 --
-
+* First JavaScript application!
+* Ruby syntax comparisons.
+*
 
 Problems With The Code:
 --
-
-
+* CSS not scaled for all resolutions.
+* Some tests not fulfilled
+*
