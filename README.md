@@ -1,6 +1,6 @@
 ![RPS!](http://www.wpclipart.com/recreation/playing/playing_2/rock_paper_scissors.png)
 
-Rock, Paper, Scissors, Bullhorns & Shocker!
+Maker's Academy - Rock, Paper, Scissors, Bullhorns & Shocker!
 --
 The usual formula. Rock beats scissors. Paper beats rock. Scissors beats paper.
 
@@ -24,6 +24,7 @@ Lessons Learned:
 * Jasmine testing language used.
 * Fairly responsive webpage design with CSS and JS in chrome.
 * Complete with win and loss counter!
+* JQuery library installed.
 
 Problems With The Code:
 --
