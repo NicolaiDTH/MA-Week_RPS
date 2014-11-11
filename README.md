@@ -1,3 +1,5 @@
+![MAlogo!](http://www.makersacademy.com/images/logo.png)
+
 ![RPS!](http://www.wpclipart.com/recreation/playing/playing_2/rock_paper_scissors.png)
 
 Maker's Academy - Rock, Paper, Scissors, Bullhorns & Shocker!
